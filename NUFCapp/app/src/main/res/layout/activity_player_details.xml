@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".player_details"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="profile_play"
+        android:elevation="2dp"
+        android:background="@drawable/panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/update_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="2dp"
+        android:minHeight="48dp"
+        android:onClick="update_profile"
+        android:src="@drawable/ic_baseline_done_24"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+
+    <ImageButton
+        android:id="@+id/select_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="2dp"
+        android:minHeight="48dp"
+        android:onClick="select_profile"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@+id/update_profile_btn"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Name"
+        android:textColor="#4d4d4d"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+    <ImageView
+        android:id="@+id/stat_card"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/panel_two"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_textview"
+        app:srcCompat="@drawable/panel_two" />
+
+    <EditText
+        android:id="@+id/goals_txtbox"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="@drawable/panel_two"
+        android:elevation="2dp"
+        android:ems="10"
+        android:inputType="number|textVisiblePassword"
+        android:text="goals"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/stat_card"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="@+id/stat_card"
+        app:layout_constraintTop_toTopOf="@id/goals_txtview" />
+
+    <TextView
+        android:id="@+id/xp_txtview2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="XP"
+        android:textColor="#454545"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/saves_txtview"
+        app:layout_constraintTop_toBottomOf="@+id/saves_txtview" />
+
+    <TextView
+        android:id="@+id/assists_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="Assists"
+        android:textColor="#454545"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/goals_txtview"
+        app:layout_constraintTop_toBottomOf="@+id/goals_txtview" />
+
+    <AutoCompleteTextView
+        android:id="@+id/league_txtbox"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="league"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:background="@drawable/panel_two"
+        app:layout_constraintEnd_toEndOf="@+id/xp_txtbox"
+        app:layout_constraintTop_toBottomOf="@+id/xp_txtbox" />
+
+    <EditText
+        android:id="@+id/xp_txtbox"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:ems="10"
+        android:inputType="number|textVisiblePassword"
+        android:text="xp"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:background="@drawable/panel_two"
+        app:layout_constraintEnd_toEndOf="@+id/saves_txtbox"
+        app:layout_constraintTop_toBottomOf="@+id/saves_txtbox" />
+
+    <TextView
+        android:id="@+id/goals_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="Goals"
+        android:textColor="#454545"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/stat_card"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="@+id/stat_card"
+        app:layout_constraintTop_toTopOf="@+id/stat_card" />
+
+    <TextView
+        android:id="@+id/saves_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="Saves"
+        android:textColor="#454545"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/assists_txtview"
+        app:layout_constraintTop_toBottomOf="@+id/assists_txtview" />
+
+    <TextView
+        android:id="@+id/league_txtview2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="League"
+        android:textColor="#454545"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/xp_txtview2"
+        app:layout_constraintTop_toBottomOf="@+id/xp_txtview2" />
+
+    <EditText
+        android:id="@+id/saves_txtbox"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:ems="10"
+        android:inputType="number|textVisiblePassword"
+        android:text="saves"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:background="@drawable/panel_two"
+        app:layout_constraintEnd_toEndOf="@+id/assists_txtbox"
+        app:layout_constraintTop_toBottomOf="@+id/assists_txtbox" />
+
+    <EditText
+        android:id="@+id/assists_txtbox"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:ems="10"
+        android:inputType="number|textVisiblePassword"
+        android:text="assis"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:background="@drawable/panel_two"
+        app:layout_constraintEnd_toEndOf="@+id/goals_txtbox"
+        app:layout_constraintTop_toBottomOf="@+id/goals_txtbox" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="update_stats"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="remove_player"
+        android:text="Remove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/panel_two"
+        android:elevation="2dp"
+        android:onClick="showxp_info"
+        app:layout_constraintBottom_toTopOf="@+id/league_txtbox"
+        app:layout_constraintStart_toEndOf="@+id/xp_txtbox"
+        app:layout_constraintTop_toTopOf="@+id/xp_txtbox"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/panel_two"
+        android:elevation="2dp"
+        android:onClick="showleague_info"
+        app:layout_constraintBottom_toBottomOf="@+id/league_txtbox"
+        app:layout_constraintStart_toEndOf="@+id/league_txtbox"
+        app:layout_constraintTop_toTopOf="@+id/league_txtbox"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
